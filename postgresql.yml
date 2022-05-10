@@ -27,11 +27,11 @@
     #  shell: "postgresql-setup initdb"
     #  when: not postgres_data.stat.exists
  
-    - name: Ensure postgresql is enabled running
-      service:
-        name: postgresql
-        enabled: yes
-        state: started
+    #- name: Ensure postgresql is enabled running
+    #  service:
+    #    name: postgresql
+    #    enabled: yes
+    #    state: started
 
     - name: "Create app database"
       postgresql_db:
