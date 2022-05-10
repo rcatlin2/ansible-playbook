@@ -72,7 +72,7 @@
     - name: "Add some dummy data to our database"
       become: true
       become_user: postgres
-      shell: psql {{ db_name }} < /tmp/dump.sql
+      shell: psql {{ db_name }} < ~/sql/dump.sql
 
   handlers:
     - name: restart postgres
